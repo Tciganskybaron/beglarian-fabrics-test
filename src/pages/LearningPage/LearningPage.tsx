@@ -1,5 +1,11 @@
 // import styles from './LearningPage.module.css';
 
+import { HeaderLearning } from '@/widgets/header';
+
 export const LearningPage = () => {
-  return <div>Learning</div>;
+  return (
+    <div>
+      <HeaderLearning />
+    </div>
+  );
 };

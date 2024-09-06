@@ -1,0 +1,14 @@
+.header {
+  height: 56px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 16px;
+}
+
+.h1 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144%;
+  color: var(--text-primary);
+}

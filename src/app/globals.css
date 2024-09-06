@@ -13,6 +13,7 @@
 
 html,
 body {
+  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -20,6 +21,15 @@ body {
 body {
   color: var(--text-primary);
   background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.content {
+  width: 360px;
+  height: 800px;
 }
 
 * {
