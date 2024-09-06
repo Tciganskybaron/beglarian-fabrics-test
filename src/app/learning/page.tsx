@@ -1,3 +1,5 @@
+import { LearningPage } from '@/pages/index';
+
 export default function Learning() {
-  return <div>Learning</div>;
+  return <LearningPage />;
 }
