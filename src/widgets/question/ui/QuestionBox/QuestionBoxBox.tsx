@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 import styles from './QuestionBox.module.css';
-import { TestItem } from '@/features/question/ui';
+import { QuestionItem } from '@/features/question/ui';
 
 const questions = Array.from({ length: 20 }, (_, i) => i + 1); // массив с номерами вопросов
 
@@ -19,7 +19,7 @@ export const QuestionBox = () => {
   return (
     <div className={styles.box}>
       {questions.map((questionNumber) => (
-        <TestItem
+        <QuestionItem
           key={questionNumber}
           number={questionNumber}
           isChecked={checkedQuestions.includes(questionNumber)}
