@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h1 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 144%;
+  color: var(--text-primary);
+}
+
+.boxButton {
+  display: flex;
+}

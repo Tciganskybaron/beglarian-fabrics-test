@@ -1,14 +1,11 @@
-import styles from './MainPage.module.css';
+//import styles from './MainPage.module.css';
 
-import { IconComponent } from '@/assets/index';
-
-const LoadingIconComponent = IconComponent.Fire;
+import { HeaderMain } from '@/widgets/layout/ui';
 
 export const MainPage = () => {
   return (
     <>
-      <div className={styles.page}>HOME</div>
-      <LoadingIconComponent />
+      <HeaderMain />
     </>
   );
 };
