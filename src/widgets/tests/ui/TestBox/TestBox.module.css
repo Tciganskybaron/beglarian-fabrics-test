@@ -1,5 +1,6 @@
-.tabBox {
+.box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 26px;
+  gap: 14px;
 }

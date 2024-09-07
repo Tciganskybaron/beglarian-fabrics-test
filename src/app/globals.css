@@ -30,6 +30,7 @@ body {
 .content {
   width: 360px;
   height: 800px;
+  padding: 48px 16px 16px 16px;
 }
 
 * {

@@ -1,0 +1,50 @@
+.item {
+  width: 71px;
+  height: 71px;
+  box-shadow: 0 0 4px rgba(18, 25, 43, 0.04);
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.number {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: #2c2d2e;
+  z-index: 1;
+}
+
+.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.moonShape {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  background-color: #f9f9f9;
+}
+
+.moonShape::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  background-color: white;
+  clip-path: circle(50% at 50% 50%);
+  transform: rotate(20deg);
+}
