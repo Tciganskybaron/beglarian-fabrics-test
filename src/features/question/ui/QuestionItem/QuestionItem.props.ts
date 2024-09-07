@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 
-export interface TestItemProps
+export interface QuestionItemProps
   extends Omit<
     DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
     'onClick'

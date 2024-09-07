@@ -1,9 +1,13 @@
-import { TestItemProps } from './TestItem.props';
+import { QuestionItemProps } from './QuestionItem.props';
 import styles from './TestItem.module.css';
 
 import { Icon } from '@/shared/ui';
 
-export const TestItem = ({ number, isChecked, onClick }: TestItemProps) => {
+export const QuestionItem = ({
+  number,
+  isChecked,
+  onClick,
+}: QuestionItemProps) => {
   return (
     <div onClick={() => onClick(number)} className={styles.item}>
       <span className={styles.number}>{number}</span>

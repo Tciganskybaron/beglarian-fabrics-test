@@ -1,12 +1,12 @@
 'use client';
 import React, { useState } from 'react';
 
-import styles from './TestBox.module.css';
-import { TestItem } from '@/features/tests/ui';
+import styles from './QuestionBox.module.css';
+import { TestItem } from '@/features/question/ui';
 
 const questions = Array.from({ length: 20 }, (_, i) => i + 1); // массив с номерами вопросов
 
-export const TestBox = () => {
+export const QuestionBox = () => {
   const [checkedQuestions, setCheckedQuestions] = useState<number[]>([]);
 
   const handleCheck = (number: number) => {

@@ -2,6 +2,14 @@
   width: 109px;
   height: 48px;
   border-bottom: 2px solid var(--contrast);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab * {
+  cursor: inherit;
 }
 
 .text {

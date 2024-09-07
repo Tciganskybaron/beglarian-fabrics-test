@@ -1,6 +1,7 @@
 :root {
   --background: #f9f9f9;
   --purple: #6b2abc;
+  --purple-secondary: #f0eaf8;
   --contrast: #ff7355;
   --contrast-secondary: #ffe3dd;
   --text-primary: #2c2d2e;
@@ -9,6 +10,7 @@
   --white: #fff;
   --green: #52a754;
   --red: #ff2045;
+  --red-secondary: #ffe9ec;
 }
 
 html,
