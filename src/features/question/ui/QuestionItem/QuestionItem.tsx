@@ -1,5 +1,5 @@
 import { QuestionItemProps } from './QuestionItem.props';
-import styles from './TestItem.module.css';
+import styles from './QuestionItem.module.css';
 
 import { Icon } from '@/shared/ui';
 

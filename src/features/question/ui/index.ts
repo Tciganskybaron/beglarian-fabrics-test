@@ -1,1 +1,1 @@
-export { TestItem } from './QuestionItem/TestItem';
+export { TestItem } from './QuestionItem/QuestionItem';
