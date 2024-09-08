@@ -8,6 +8,19 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(18, 25, 43, 0.1);
+}
+
+.item:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(18, 25, 43, 0.1);
 }
 
 .number {
@@ -17,6 +30,7 @@
   text-align: center;
   color: var(--text-primary);
   z-index: 1;
+  transition: color 0.2s ease;
 }
 
 .icon {
@@ -34,6 +48,7 @@
   height: 63px;
   border-radius: 50%;
   background-color: var(--background);
+  transition: background-color 0.2s ease;
 }
 
 .moonShape::before {
@@ -47,4 +62,8 @@
   background-color: var(--white);
   clip-path: circle(50% at 50% 50%);
   transform: rotate(20deg);
+}
+
+.item:hover .moonShape {
+  background-color: var(--purple-secondary);
 }
