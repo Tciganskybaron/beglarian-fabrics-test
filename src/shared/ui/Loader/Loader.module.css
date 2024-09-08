@@ -1,0 +1,28 @@
+.loader {
+  display: flex;
+  gap: 4px;
+}
+
+.cell {
+  width: 36px;
+  height: 6px;
+  background: #52a754;
+  border-radius: 5px;
+  opacity: 0.1;
+}
+
+.animatedCell {
+  animation: fill 0.5s ease forwards;
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0.1;
+    transform: scaleX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}

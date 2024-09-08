@@ -1,4 +1,6 @@
-import { IconCircle, Icon } from '@/shared/ui';
+'use client';
+
+import { IconCircle, Icon, Loader } from '@/shared/ui';
 import styles from './LearningProgressCard.module.css';
 import { LearningProgressCardProps } from './LearningProgressCard.props';
 import Link from 'next/link';
@@ -30,7 +32,9 @@ export const LearningProgressCard = ({
       <p className={styles.questions}>
         {progress} {text.QUESTIONS_OUT} {totalQuestions} {text.PASSED}
       </p>
-      <div className={styles.progress}></div>
+      <div className={styles.progress}>
+        <Loader filledCount={6} />
+      </div>
     </div>
   );
 };
