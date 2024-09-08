@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Beglarian Fabrics Test
 
-## Getting Started
+Это проект — тестовое задание для компании Beglarian Fabrics, разработанный с использованием **Next.js**, **TypeScript**, и **Zustand** для управления состоянием. Верстка полностью соответствует макету из [Figma](https://www.figma.com/design/28QcFBj4ig9VeU0hgzS9cY/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5?node-id=0-1&t=DUAGGmGTemltg6iP-0).
 
-First, run the development server:
+Проект построен с использованием архитектуры **Feature-Sliced Design (FSD)**, что позволяет поддерживать масштабируемость и удобство работы с большими проектами.
+
+## Основные функции
+
+1. **Верстка двух страниц по макету в Figma**. Оставлено ограничение по ширине для мобильной версии.
+2. **Progress Bar для пройденных вопросов** — отображает количество пройденных вопросов в виде заполненных полосок.
+3. **Страница вопросов** — на ней можно отметить и снять отметку с пройденных вопросов. Состояние сохраняется при переходах между страницами.
+4. **Использование Zustand для управления состоянием** — вопросы сохраняются в локальном стейте, а также поддерживается кэширование между сессиями.
+
+## Технологии
+
+- **Next.js** — серверный рендеринг и маршрутизация.
+- **TypeScript** — строгая типизация для более безопасного и предсказуемого кода.
+- **Zustand** — легкий и гибкий стейт-менеджер.
+- **ESLint** и **Prettier** — линтинг и форматирование кода для поддержки консистентного стиля.
+- **Husky** и **lint-staged** — проверка и форматирование кода перед коммитом для поддержания качества кода.
+
+## Установка и запуск проекта
+
+### 1. Клонирование репозитория
+
+```bash
+git clone https://github.com/your-username/beglarian-fabrics-test.git
+cd beglarian-fabrics-test
+```
+
+### 2. Установка зависимостей
+
+Убедитесь, что у вас установлен Node.js версии 16 или выше. Затем выполните команду:
+
+```bash
+npm install
+```
+
+### 3. Запуск в режиме разработки
+
+Запустите сервер разработки:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Приложение будет доступно по адресу [localhost](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Сборка и запуск в production режиме
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Для сборки приложения выполните команду:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Запуск в production режиме:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Структура проекта
 
-## Deploy on Vercel
+Проект реализован в соответствии с архитектурой Feature-Sliced Design:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+src/
+  ├── app/               # Входная точка приложения
+  ├── assets/            # Статические файлы, SVG-иконки
+  ├── entities/          # Сущности (Layout, Learning)
+  │   ├── layout/        # Сущность Layout (компоненты заголовка и подвала)
+  │   └── learning/      # Сущность Learning (карточки, вопросы и прогресс)
+  ├── features/          # Фичи (основные элементы приложения)
+  │   └── learning/      # Функциональные компоненты для Learning
+  ├── shared/            # Переиспользуемые компоненты и утилиты
+  ├── widgets/           # Комплексные компоненты, содержащие фичи и сущности
+  └── pages/             # Страницы приложения (LearningPage, MainPage)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Структура данных
+
+Вопросы представлены в виде массива объектов с ID и статусом (пройден/не пройден). Прогресс вычисляется на основе количества пройденных вопросов и отображается в компоненте Loader.
+
+Пример структуры вопросов
+
+```json
+{
+  "questions": [
+    { "id": 1, "passed": true },
+    { "id": 2, "passed": false },
+    { "id": 3, "passed": false },
+    ...
+    { "id": 20, "passed": false }
+  ]
+}
+```
+
+## Линтинг и форматирование
+
+Проект настроен на автоматическую проверку и форматирование кода перед каждым коммитом с помощью Husky и lint-staged. Это помогает поддерживать чистоту и консистентность кода.
+
+Запустить линтинг вручную можно командой:
+
+```bash
+npm run lint:fix
+```
+
+Для форматирования кода:
+
+```bash
+npm run format
+```
+
+## Завершение
+
+Спасибо за внимание! Проект успешно завершен, и все требования выполнены в соответствии с ТЗ. Для любых вопросов или предложений можно связаться через GitHub.
