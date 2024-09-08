@@ -8,11 +8,7 @@ export const MainPage = () => {
     <div className={styles.main}>
       <div className={styles.content}>
         <HeaderMain />
-        <LearningProgressCard
-          category={'B'}
-          progress={112}
-          totalQuestions={730}
-        />
+        <LearningProgressCard category={'B'} />
         <LearninDashboard />
       </div>
       <div className={styles.footer}>

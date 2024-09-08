@@ -6,12 +6,14 @@ import { LearningProgressCardProps } from './LearningProgressCard.props';
 import Link from 'next/link';
 import text from '@/shared/constants/text';
 import { getFilledBarsCount } from '@/shared/helpers';
+import { useLearningStore } from '@/entities/learning/model/learningStore';
 
 export const LearningProgressCard = ({
   category,
-  progress,
-  totalQuestions,
 }: LearningProgressCardProps) => {
+  const [progress, totalQuestions] = useLearningStore((state) =>
+    state.getProgress()
+  );
   return (
     <div className={styles.card}>
       <div className={styles.header}>
@@ -34,7 +36,7 @@ export const LearningProgressCard = ({
         {progress} {text.QUESTIONS_OUT} {totalQuestions} {text.PASSED}
       </p>
       <div className={styles.progress}>
-        <Loader filledCount={getFilledBarsCount(730, 112)} />
+        <Loader filledCount={getFilledBarsCount(totalQuestions, progress)} />
       </div>
     </div>
   );
