@@ -1,18 +1,15 @@
 //import styles from './MainPage.module.css';
 
-import { IconCircle } from '@/shared/ui';
+import { LearninDashboard } from '@/features/learning/ui';
+//import { IconCircle } from '@/shared/ui';
 import { FooterMain, HeaderMain } from '@/widgets/layout/ui';
 
 export const MainPage = () => {
   return (
     <>
       <HeaderMain />
-      <IconCircle icon={'LExam'} color={'red'} />
-      <IconCircle icon={'RocketLaunch'} color={'purple'} />
-      <IconCircle icon={'TVPlay'} color={'purple'} />
-      <IconCircle icon={'Turn'} color={'purple'} />
-      <IconCircle icon={'GameController'} color={'purple'} />
-
+      <LearninDashboard />
+      {/* 
       <IconCircle
         icon={'Pen'}
         color={'contrast'}
@@ -36,7 +33,7 @@ export const MainPage = () => {
         color={'contrast'}
         sizeCircle={'medium'}
         sizeIcon={'medium'}
-      />
+      /> */}
       <FooterMain />
     </>
   );

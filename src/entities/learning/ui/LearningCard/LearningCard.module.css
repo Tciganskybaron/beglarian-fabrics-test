@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 16px 12px;
+  background-color: var(--white);
+  width: 100%;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--contrast-active);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.card:active {
+  background-color: var(--contrast-secondary);
+  transform: scale(0.98);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card:focus {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  width: 86px;
+  color: rgba(0, 0, 0, 0.87);
+  word-break: normal;
+  transition: color 0.3s ease;
+}
+
+.card:hover .title {
+  color: var(--text-primary);
+}
