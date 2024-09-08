@@ -16,3 +16,7 @@
 .contrast {
   background-color: var(--contrast);
 }
+
+.contrast-secondary {
+  background-color: var(--contrast-secondary);
+}

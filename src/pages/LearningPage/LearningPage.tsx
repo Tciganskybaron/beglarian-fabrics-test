@@ -7,7 +7,7 @@ import { QuestionBox } from '@/widgets/learning/ui';
 
 export const LearningPage = () => {
   return (
-    <div>
+    <div className={styles.main}>
       <HeaderLearning />
       <div className={styles.tabBox}>
         <TabSwitcher />

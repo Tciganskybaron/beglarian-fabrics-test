@@ -30,6 +30,7 @@ export const IconCircle = ({
         [styles.red]: color === 'red',
         [styles.purple]: color === 'purple',
         [styles.contrast]: color === 'contrast',
+        [styles['contrast-secondary']]: color === 'contrast-secondary',
       })}
       style={{
         width: CircleSizes[sizeCircle],

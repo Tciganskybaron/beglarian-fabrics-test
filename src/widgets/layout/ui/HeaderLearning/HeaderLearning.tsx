@@ -8,7 +8,7 @@ export const HeaderLearning = () => {
   return (
     <div className={styles.header}>
       <Link href={'/'}>
-        <Icon iconName={'Left'} size={24} />
+        <Icon icon={'Left'} size={24} />
       </Link>
       <h1 className={styles.h1}>{text.LEARNING}</h1>
     </div>

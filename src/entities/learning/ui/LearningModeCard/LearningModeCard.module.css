@@ -1,0 +1,33 @@
+.card {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.card:hover .title {
+  color: var(--contrast);
+}

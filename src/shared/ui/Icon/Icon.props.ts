@@ -4,6 +4,6 @@ import { IconType } from '@/assets/index';
 
 export interface IconProps
   extends DetailedHTMLProps<SVGAttributes<SVGSVGElement>, SVGSVGElement> {
-  iconName: IconType;
+  icon: IconType;
   size?: 20 | 24 | 28;
 }

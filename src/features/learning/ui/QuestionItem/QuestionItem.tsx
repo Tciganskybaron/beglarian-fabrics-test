@@ -13,7 +13,7 @@ export const QuestionItem = ({
       <span className={styles.number}>{number}</span>
       {isChecked && (
         <span className={styles.icon}>
-          <Icon iconName={'CheckCircle'} size={20} />
+          <Icon icon={'CheckCircle'} size={20} />
         </span>
       )}
       <div className={styles.moonShape}></div>

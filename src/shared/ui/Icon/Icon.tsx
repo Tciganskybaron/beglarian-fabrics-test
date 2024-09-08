@@ -6,12 +6,13 @@ import { IconProps } from './Icon.props';
 import styles from './Icon.module.css';
 
 export const Icon = ({
-  iconName,
+  icon,
   size = 24,
   className,
   ...props
 }: IconProps): JSX.Element => {
-  const Component = IconComponent[iconName];
+  const Component = IconComponent[icon];
+  if (!Component) return <></>;
   return (
     <Component
       style={{ width: size, height: size }}

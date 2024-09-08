@@ -14,7 +14,7 @@ export const FooterItem = ({ icon, text, url, active }: FooterItemProps) => {
           [styles.active]: active,
         })}
       >
-        <Icon iconName={icon} />
+        <Icon icon={icon} />
       </div>
       <span
         className={cn(styles.text, {

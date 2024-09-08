@@ -1,13 +1,23 @@
 .box {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
 }
 
-.box .card {
+.cardBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.cardBox .card {
   flex-basis: calc(50% - 4px);
 }
 
-.box .card:last-child {
+.cardBox .card:last-child {
   flex-basis: 100%;
+}
+
+.modeBox {
+  display: flex;
 }
