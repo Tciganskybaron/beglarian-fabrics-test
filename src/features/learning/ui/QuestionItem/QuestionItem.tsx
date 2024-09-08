@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { QuestionItemProps } from './QuestionItem.props';
 import styles from './QuestionItem.module.css';
 
@@ -7,9 +8,15 @@ export const QuestionItem = ({
   number,
   isChecked,
   onClick,
+  className,
+  ...props
 }: QuestionItemProps) => {
   return (
-    <div onClick={() => onClick(number)} className={styles.item}>
+    <div
+      onClick={() => onClick(number)}
+      className={cn(styles.item, className)}
+      {...props}
+    >
       <span className={styles.number}>{number}</span>
       {isChecked && (
         <span className={styles.icon}>

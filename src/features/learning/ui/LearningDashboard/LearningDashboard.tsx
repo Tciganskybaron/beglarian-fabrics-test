@@ -1,7 +1,7 @@
 //import cn from 'classnames';
 import { LearningCard, LearningModeCard } from '@/entities/learning/ui';
 import styles from './LearningDashboard.module.css';
-import text from '@/shared/constants/text';
+import { text } from '@/shared/constants';
 
 export const LearninDashboard = () => {
   return (

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import text from '@/shared/constants/text';
+import { text } from '@/shared/constants';
 import { Icon } from '@/shared/ui';
 
 import styles from './HeaderLearning.module.css';

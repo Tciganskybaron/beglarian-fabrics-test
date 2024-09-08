@@ -4,7 +4,7 @@ import { IconCircle, Icon, Loader } from '@/shared/ui';
 import styles from './LearningProgressCard.module.css';
 import { LearningProgressCardProps } from './LearningProgressCard.props';
 import Link from 'next/link';
-import text from '@/shared/constants/text';
+import { text } from '@/shared/constants';
 import { getFilledBarsCount } from '@/shared/helpers';
 import { useLearningStore } from '@/entities/learning/model/learningStore';
 

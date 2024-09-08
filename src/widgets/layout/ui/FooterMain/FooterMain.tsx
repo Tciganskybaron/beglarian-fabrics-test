@@ -1,6 +1,6 @@
 import { FooterItem } from '@/entities/layout/ui';
 import styles from './FooterMain.module.css';
-import text from '@/shared/constants/text';
+import { text } from '@/shared/constants';
 
 export const FooterMain = () => {
   return (

@@ -1,4 +1,4 @@
-const text = {
+export const text = {
   LEARNING: 'Learning',
   TESTS: 'Tests',
   RAY: 'Ray Driving Theory',
@@ -20,5 +20,3 @@ const text = {
   CODE: 'Code',
   FAVORITES: 'Favorites',
 };
-
-export default text;

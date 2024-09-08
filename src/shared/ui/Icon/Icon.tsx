@@ -12,7 +12,6 @@ export const Icon = ({
   ...props
 }: IconProps): JSX.Element => {
   const Component = IconComponent[icon];
-  if (!Component) return <></>;
   return (
     <Component
       style={{ width: size, height: size }}

@@ -1,4 +1,4 @@
-import text from '@/shared/constants/text';
+import { text } from '@/shared/constants';
 import styles from './TabSwitcher.module.css';
 
 export const TabSwitcher = () => {

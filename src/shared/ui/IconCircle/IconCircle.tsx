@@ -21,12 +21,13 @@ export const IconCircle = ({
   color,
   sizeCircle = 'small',
   sizeIcon = 'small',
+  className,
   ...props
 }: IconCircleProps): JSX.Element => {
   const Component = IconComponent[icon];
   return (
     <div
-      className={cn(styles.circle, {
+      className={cn(styles.circle, className, {
         [styles.red]: color === 'red',
         [styles.purple]: color === 'purple',
         [styles.contrast]: color === 'contrast',
