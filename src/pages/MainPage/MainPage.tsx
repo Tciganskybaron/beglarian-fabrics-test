@@ -1,7 +1,7 @@
 //import styles from './MainPage.module.css';
 
 import { IconCircle } from '@/shared/ui';
-import { HeaderMain } from '@/widgets/layout/ui';
+import { FooterMain, HeaderMain } from '@/widgets/layout/ui';
 
 export const MainPage = () => {
   return (
@@ -37,6 +37,7 @@ export const MainPage = () => {
         sizeCircle={'medium'}
         sizeIcon={'medium'}
       />
+      <FooterMain />
     </>
   );
 };

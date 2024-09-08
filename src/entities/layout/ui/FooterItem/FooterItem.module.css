@@ -1,0 +1,79 @@
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 90px;
+  height: 74px;
+  text-decoration: none;
+  background-color: var(--white);
+  border-radius: 8px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.link:hover {
+  background-color: var(--background);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.link:active {
+  background-color: var(--contrast-secondary);
+  transform: scale(0.95);
+}
+
+.link:focus {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition:
+    transform 0.3s ease,
+    fill 0.3s ease;
+}
+
+.icon.active {
+  border-radius: 12px;
+  background: var(--contrast-active);
+}
+
+.text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 117%;
+  text-align: center;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.text.active {
+  color: var(--contrast);
+}
+
+.link:hover .text {
+  color: var(--text-primary);
+}
+
+.link:active .text {
+  color: var(--text-secondary);
+}
+
+.link:hover .icon {
+  transform: scale(1.1);
+}
+
+.link:active .icon {
+  transform: scale(0.95);
+}
