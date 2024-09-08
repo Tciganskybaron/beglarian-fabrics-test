@@ -9,6 +9,16 @@ const text = {
   CATEGORY: 'Category',
   QUESTIONS_OUT: 'questions out of',
   PASSED: 'passed',
+  DVSA: 'DVSA Exam',
+  EXPRESS: 'Express mode',
+  HAZARD: 'Hazard perception',
+  ROAD: 'Road signs',
+  MULTIPLAYER: 'Multiplayer',
+  MISTAKES: 'Mistakes',
+  STATICTICS: 'Statistics',
+  HIGHWAY: 'Highway',
+  CODE: 'Code',
+  FAVORITES: 'Favorites',
 };
 
 export default text;

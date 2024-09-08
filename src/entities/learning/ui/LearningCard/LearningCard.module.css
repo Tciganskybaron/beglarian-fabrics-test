@@ -37,7 +37,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
-  width: 86px;
+  width: auto;
   color: rgba(0, 0, 0, 0.87);
   word-break: normal;
   transition: color 0.3s ease;
