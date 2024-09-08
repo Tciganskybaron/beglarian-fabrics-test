@@ -5,6 +5,7 @@ import styles from './LearningProgressCard.module.css';
 import { LearningProgressCardProps } from './LearningProgressCard.props';
 import Link from 'next/link';
 import text from '@/shared/constants/text';
+import { getFilledBarsCount } from '@/shared/helpers';
 
 export const LearningProgressCard = ({
   category,
@@ -33,7 +34,7 @@ export const LearningProgressCard = ({
         {progress} {text.QUESTIONS_OUT} {totalQuestions} {text.PASSED}
       </p>
       <div className={styles.progress}>
-        <Loader filledCount={6} />
+        <Loader filledCount={getFilledBarsCount(730, 112)} />
       </div>
     </div>
   );
