@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  frontend_beglarian:
+    container_name: frontend_beglarian
+    build: .
+    restart: always
+    environment:
+      - NODE_ENV=production
+      - PORT=80
+    ports:
+      - 80:80
+    networks:
+       - next-js-work
+
+networks:
+   next-js-work:
+    driver: bridge
